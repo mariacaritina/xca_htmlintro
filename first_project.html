@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form onsubmit="onSubmit()">
+            <!DOCTYPE html>
+            <html lang="en">
+                <head> 
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+            
+                    <style>
+            
+                            body {background-color: #DBF9FC;}
+                            body {font-family: Arial, Helvetica, sans-serif;}
+                            body {text-align: center;}
+            
+                        .center {
+                          text-align: center;
+                          border: 3px solid blue;
+                        }
+                        
+                        .paint-box {background-color: #97B1A6;} 
+                        .cat-box {background-color: #E0AC9D}
+            </style>
+                </head>
+            <body> 
+            <img src="https://media.licdn.com/dms/image/D5603AQES5Ni2hZ7sUQ/profile-displayphoto-shrink_200_200/0/1689875047822?e=1700697600&v=beta&t=3MYRZMUZEZ7AOB0kSoWoRyrVdHo9w1A5Pr8eIhVHwCc" alt="Linked In Profile Picture"
+            width = "200"
+            height = "200">
+            
+            <div class="center">
+            <h3> Maria Ortiz has been an artist all her life. 
+                She studied arts administration, art history and art studio at the University of Kentucky.
+                Her inante curiosity has led her to programming and cybersecurity.</h3>
+            </div>
+            <h4>Outside of programming, her hobbies include:</h4>
+            
+            
+            
+            <div class ="paint-box">
+                <h3>Painting!</h3>
+                <img src="https://i.pinimg.com/564x/f4/6b/92/f46b924c93829734af158a2328d3568b.jpg" alt="Hand painting"
+                    width = "200"
+                    height = "250">
+            </div>
+            
+            <div class ="cat-box">
+                <h3>Hanging out with my cat!</h3>
+                <img src="https://i.pinimg.com/564x/a4/96/66/a49666a753acf5830ef7a1903b4d7382.jpg" alt="Orange cat between books"
+                    width = "200"
+                    height = "300">
+             </div>       
+            
+             <br> 
+             <form onsubmit="onSubmit()">
+            
+              <!-- text input -->
+            <h3>Lets get in touch!</h3>
+            <label for="email">Enter your email:</label>
+            <input type="text" name="email" id="email">
+            
+            <br>  
+            
+            <!--checkbox - to select multiple options on a list-->
+            <input type="checkbox" id="updates" name="updates" value="updates">
+            <label for="updates">Get Updates!</label>
+            <br> 
+            <input type="checkbox" id="photography" name="newsletter" value="Newsletter"> 
+            <label for="newsletter">Suscribe to my Newsletter!</label>
+            <br> 
+
+
+
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+<br> 
+
+        <script>
+            function onSubmit() {
+                let name = document.querySelector("#email").value
+                let getinTouch = document.querySelector("input[name=updates_Newsletter]:checked").value
+                let hobbies = []
+                document.querySelectorAll("input[name=contact]:checked").forEach(contact => contact.push(hobby.value));
+                hobbies.join(", ");
+                alert(`Oh hi ${name}!  It looks like you're interested in staying in contact ${contact}.  I hope to hear from you!`)
+            }
+        </script>
+    </body>
+</html>
